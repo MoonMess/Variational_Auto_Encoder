@@ -1,37 +1,31 @@
-# Datascience Project 2 : VAE
+# Variational Auto Encoder using PyTorch on the MNIST dataset
 
-Variational Auto Encoder using PyTorch on the MNIST dataset
-- Benjamin
-- Alik
-- Mounir
+Main collaborators :
+- Mounir Messaoudi
+- Benjamin Sykes
 
 ## Ideas
 - **Show the number of parameters for each model**
-- Latent space visualisation while morphing (TSNE ? Impose 2D latent space ?)
+- Latent space visualisation while morphing 
 - Adding "salt and pepper" noise to help better reconstruction --> **Mounir**
-- Compare (with Frechet Inception) only dense layers and convolution layers (with a fixed number of parameters) --> **Alik**
+- Compare (with Frechet Inception) only dense layers and convolution layers (with a fixed number of parameters) --> **Mounir**
 - Tuning loss function (KL divergence vs Reconstruction Loss) --> **Benjamin**
 - Testing different impacts of the latent space on the reconstruction --> **Benjamin**
 - Visualisation of evolution of latent space through time
-- (Bonus) Try to reconstruct a missing part of an image with a VAE ?
 
 ## Using the modules
 ### Train a model
 Use the `Generate/train_model.py` file with the parameters specified. For example : `python3 Generate/train_model.py --z_dim 2 --nb_epochs 1 --model_folder ./models_lamsade/ --losses_path losses_lamsade/ --k1 0.5 --k2 0.5 `
 The model will be saved in the specified folder and the losses as well.
 
-## To do group
-### Priority
-- Top à faire)  sortir 1024 images du Dense (k1= 1/2, k2= 1/2)    (avant prez)     Mounir
-- print paramètre du model  (avant prez)    Mounir pr Dense et BenJ Conv
-- diapo à faire sur Overleaf   Alsyr 
-### Secondary
+## Done
+- sortir 1024 images du Dense (k1= 1/2, k2= 1/2) --> Mounir
+- print paramètre du model -->  Mounir pr Dense et BenJ Conv
 - Amélioration du train : par défaut k1=k2=1/2
-- Utilisation des images bruités  (avant prez) Mounir et BenJ
-- Tuner la latent_dim (avant prez) et voir jusqu'où on peut aller     Alsyr
-- normaliser les inputs??   (avant prez)    à voir 
-- Tuner le k1 et k2 et voir les variations de performance (avant prez)   BenJ
-- regarder le Beta-VAE/Design Tangal   (après prez)   à voir
+- Utilisation des images bruités --> Mounir
+- Tuner la latent_dim -->  Mounir et BenJ
+- normaliser les inputs
+- Tuner le k1 et k2 et voir les variations de performance BenJ
 
 
 ## Computing the FID (Frechet Inception Distance)
